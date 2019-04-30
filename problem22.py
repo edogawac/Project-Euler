@@ -1,16 +1,15 @@
-file = open("names.txt", 'r')
-names = file.read().split(",")
-names.sort()
-
+from runtime import proRuntime as runtime
 
 def sum(char):
     sum = (ord(char) - ord('A')) + 1
     return sum
 
-
 score = 0
 score2 = 0
 index = 0
+with open("names.txt", 'r') as file:
+    names = file.read().split(",")
+    names.sort()
 while index < len(names):
     i = 1
     score = 0
@@ -23,4 +22,4 @@ while index < len(names):
     index += 1
 
 print(score2)
-file.close()
+runtime()
