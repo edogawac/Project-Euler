@@ -22,4 +22,4 @@ while index < len(names):
     index += 1
 
 print(score2)
-runtime() 
+runtime()
